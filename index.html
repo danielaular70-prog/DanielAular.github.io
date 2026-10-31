@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dblock55 - Sitio Oficial</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding-top: 70px;
+    }
+
+    /* Barra superior estilo Dart */
+    .menu-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #1f1f1f;
+      border-bottom: 2px solid #e50914;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #e50914;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    /* Menú hamburguesa para teléfono */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1f1f1f;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end; /* Alineado a la derecha */
+        padding: 15px 20px;
+        box-sizing: border-box;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    /* Contenedor principal */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    /* Estilo de Tarjeta (Card) */
+    .tarjeta {
+      background-color: #1e1e1e;
+      border: 1px solid #333333;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .tarjeta h2 {
+      color: #e50914;
+      margin-top: 0;
+    }
+
+    .tarjeta p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Galería de Fotos Estáticas */
+    .galeria {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    .galeria img {
+      width: 32%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 1px solid #444;
+    }
+
+    @media (max-width: 600px) {
+      .galeria {
+        flex-direction: column;
+      }
+      .galeria img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    /* Botones de Redes */
+    .btn-redes {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      background-color: #e50914;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <div class="menu-bar">
+    <div class="logo">DBLOCK<span>55</span></div>
+    <button class="hamburger" id="btnMenu">☰</button>
+    <ul class="nav-links" id="menuLista">
+      <li><a href="#fotos">Fotos</a></li>
+      <li><a href="#biografia">Biografía</a></li>
+      <li><a href="#gang">55 Gang</a></li>
+      <li><a href="#redes">Redes</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+
+    <!-- TARJETA 1: GALERÍA DE FOTOS -->
+    <div class="tarjeta" id="fotos">
+      <h2>Galería</h2>
+      <div class="galeria">
+        <!-- AQUÍ COLOCAS TUS FOTOS -->
+        <img src="IMG-20260701-WA0014.jpg" alt="Dblock55 Foto 1">
+        <img src="IMG_20260502_104311_795.jpg" alt="Dblock55 Foto 2">
+        <img src="IMG_2413.JPG" alt="Dblock55 Foto 3">
+      </div>
+    </div>
+
+    <!-- TARJETA 2: BIOGRAFÍA -->
+    <div class="tarjeta" id="biografia">
+      <h2>Biografía</h2>
+      
+      <p> Daniel ernánde o Dblock55 (nacido el 13 de octubre de 2008 en Valencia, estado Carabobo) es un artista emergente de la música urbana en Venezuela.</p>
+      <p>Con un sonido versátil que conecta con las vivencias de su generación, Dblock55 no solo busca hacer canciones, sino construir un movimiento cultural desde su tierra natal.</p>
+      <p>Es el creador de la comunidad 55 Gang, representando la nueva escuela urbana con disciplina y talento.</p>
+    </div>
+
+    <!-- TARJETA 3: 55 GANG -->
+    <div class="tarjeta" id="gang">
+      <h2>55 Gang</h2>
+      <p>La 55 Gang es el movimiento oficial creado por Dblock55 para unir a la juventud y al talento urbano de Valencia.</p>
+    </div>
+
+    <!-- TARJETA 4: REDES SOCIALES -->
+    <div class="tarjeta" id="redes">
+      <h2>Redes Oficiales</h2>
+      <p>Sigue mi contenido en mis canales oficiales:</p>
+      
+      <!-- AQUÍ PONER TUS LINKS -->
+      <a href="https://www.youtube.com/@dblock55e" target="_blank" class="btn-redes">YouTube</a>
+      <a href="https://www.Instagram.com/dblock_55?mdxt=a21nYmVsam9yZG42" target="_blank" class="btn-redes">Instagram</a>
+      <a href="https://www.tiktok.com/@dblock5552" target="_blank" class="btn-redes">TikTok</a>
+    </div>
+
+  </div>
+
+  <!-- SCRIPT PARA EL MENÚ EN TELÉFONO -->
+  <script>
+    const btnMenu = document.getElementById('btnMenu');
+    const menuLista = document.getElementById('menuLista');
+
+    btnMenu.addEventListener('click', () => {
+      menuLista.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
